@@ -41,12 +41,10 @@ namespace maui_search
             }
         }
 
-        // Simulate or Fetch Weather Data
         private async Task<WeatherData> FetchWeatherData(string city, DateTime date)
         {
             try
             {
-                // Simulate or replace with API call
                 Tempo? previsao = await DataService.GetPrevisaoDoTempo(city);
                 if (previsao != null)
                 {
@@ -67,7 +65,6 @@ namespace maui_search
                 await DisplayAlert("Erro 1", ex.Message, "OK");
             }
 
-            // Fallback if no data
             return new WeatherData
             {
                 City = city,
@@ -78,7 +75,6 @@ namespace maui_search
             };
         }
 
-        // Simulate or fetch reverse geocode data
         private async Task<string> GetGeocodeReverseData(double latitude, double longitude)
         {
             IEnumerable<Placemark> placemarks = await Geocoding.Default.GetPlacemarksAsync(latitude, longitude);
@@ -109,7 +105,7 @@ namespace maui_search
                     string cidadeObtida = await GetGeocodeReverseData(latitude, longitude);
 
                     ResultLabel.Text = $"Cidade obtida: {cidadeObtida}\nLatitude: {latitude}\nLongitude: {longitude}";
-                    CityEntry.Text = cidadeObtida; // Autofill the city based on the user's location
+                    CityEntry.Text = cidadeObtida;
                 }
             }
             catch (Exception ex)
