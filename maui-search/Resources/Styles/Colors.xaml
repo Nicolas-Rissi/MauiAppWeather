@@ -286,10 +286,6 @@
     <Color x:Key="TertiaryDark">#f43f5e</Color>
     <Color x:Key="TertiaryDarkText">#ffffff</Color>
 
-    <Color x:Key="Tertiary">#f43f5e</Color>
-    <Color x:Key="TertiaryDark">#f43f5e</Color>
-    <Color x:Key="TertiaryDarkText">#fff</Color>
-
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
