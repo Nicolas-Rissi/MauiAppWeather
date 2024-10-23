@@ -31,7 +31,7 @@
             }
         }
 
-        private WeatherData SimulateWeatherData(string city, DateTime date)
+        private static WeatherData SimulateWeatherData(string city, DateTime date)
         {
             return new WeatherData
             {
